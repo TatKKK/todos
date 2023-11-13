@@ -1,0 +1,9 @@
+
+.error{
+    background-color: aqua;
+    color:red;
+}
+.submit-btn{
+    display:Flex;
+    justify-content: end;
+}

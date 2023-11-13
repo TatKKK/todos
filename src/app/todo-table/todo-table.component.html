@@ -1,0 +1,20 @@
+<table class="table table-bordered table-primary w-50 m-3">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Todo</th>
+        <th scope="col">Deadline</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <th scope="row">{{task.id}} </th>
+        <td >{{task.name}}</td>
+        <Td>{{task.deadline|date}}</Td>
+        <td><input type="checkbox" (click)="toggleTask(task)"> </td>
+        <td><button (click)="deleteTask(task.id)" class="delete">x</button></td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,16 @@
+<form (ngSubmit)="addTask()">
+    <input type="text" 
+        [(ngModel)]="taskName"
+        name="taskName"
+        class="form-control w-50 mt-3" 
+        placeholder="Write here">
+    <input type="date"
+        [(ngModel)]="taskDeadline"
+        [class.error]="isDateValid"
+        name="deadline"
+        class="form-control w-50 mt-2"
+        placeholder="Choose date"><!--es rogor shevcvalo..-->
+        <div class="submit-btn w-50">
+             <button type="submit" class="btn btn-primary mt-3">Add Todo</button>
+        </div>
+</form>
