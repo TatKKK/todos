@@ -6,7 +6,7 @@
         placeholder="Write here">
     <input type="date"
         [(ngModel)]="taskDeadline"
-        [class.error]="isDateValid"
+        [class.error]="!isDateValid"
         name="deadline"
         class="form-control w-50 mt-2"
         placeholder="Choose date"><!--es rogor shevcvalo..-->

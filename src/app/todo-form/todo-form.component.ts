@@ -11,7 +11,7 @@ export class TodoFormComponent {
   taskDeadline='';
   tasks=[];
   @Output() taskAdded = new EventEmitter<{name:string, deadline:string}>();
-  isDateValid=false;
+  isDateValid=true;
 
   constructor(private storageService:StorageService){ }
 
@@ -20,7 +20,6 @@ export class TodoFormComponent {
       const currentDate=new Date().toISOString().split('T')[0];
       if(new Date(this.taskDeadline)>=new Date(currentDate)){
         this.taskAdded.emit({name:this.taskName.trim(), deadline:this.taskDeadline});
-        this.isDateValid=true;
           console.log(`task added ${this.taskName}`);
       }     else{
        this.isDateValid=false;
