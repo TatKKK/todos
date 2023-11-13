@@ -20,7 +20,7 @@ export class TodoTableComponent {
 
     const oneDay=24*60*1000;
     const threeDays=3*oneDay;
-    const sevenDays=7*oneDay;
+   
 
     if(timeLeft<=oneDay){
      return 'danger';

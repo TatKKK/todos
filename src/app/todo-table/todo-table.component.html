@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let task of tasks">
+      <tr *ngFor="let task of tasks" [ngClass]="{'table-primary': getTimeLeft(task.deadline) === 'primary', 'table-warning': getTimeLeft(task.deadline) === 'warning', 'table-danger': getTimeLeft(task.deadline) === 'danger'}">
         <th scope="row">{{task.id}} </th>
         <td >{{task.name}}</td>
         <Td>{{task.deadline|date}}</Td>
